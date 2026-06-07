@@ -658,7 +658,7 @@ async function confirmSignup() {
 
     if (json.ok) {
       closeModal();
-      showSuccess({ ...payload, roleName: selectedRole.name, timestamp: new Date().toLocaleString('th-TH') });
+      showSuccess({ ...payload, roleName: selectedRole?.name || '', timestamp: new Date().toLocaleString('th-TH') });
     } else if (json.error === 'FULL') {
       confirmBtn.textContent = 'ยืนยัน ✓';
       confirmBtn.disabled = false;
