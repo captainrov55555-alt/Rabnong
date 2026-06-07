@@ -680,7 +680,7 @@ async function confirmSignup() {
 function showSuccess(entry) {
   document.getElementById('step2').style.display = 'none';
   document.getElementById('step2Indicator').classList.add('done');
-  document.getElementById('successRole').textContent = entry.roleName;
+  document.getElementById('successRole').textContent = entry.roleName || '';
   const fields = [
     ['ชื่อเล่น', entry.nickname], ['ชื่อ-นามสกุล', entry.fullname],
     ['อีเมล', entry.email], ['ภาค', entry.region],
